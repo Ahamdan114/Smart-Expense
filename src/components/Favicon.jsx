@@ -1,6 +1,6 @@
 // Favicon.jsx
 import React, { useEffect } from "react";
-import { SiSololearn } from "react-icons/si";
+import { SiSmartthings } from "react-icons/si";
 import { IconContext } from "react-icons";
 import ReactDOMServer from "react-dom/server";
 
@@ -14,7 +14,7 @@ const Favicon = () => {
         // Create an instance of the React icon component
         const reactIcon = (
             <IconContext.Provider value={{ size: "32px", color: "white"}}>
-                <SiSololearn />
+                <SiSmartthings />
             </IconContext.Provider>
         );
 
