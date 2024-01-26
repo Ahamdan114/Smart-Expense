@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Smart-Expense/static/css/main.4b998ee4.css",
+    "main.js": "/Smart-Expense/static/js/main.9843f141.js",
+    "index.html": "/Smart-Expense/index.html",
+    "main.4b998ee4.css.map": "/Smart-Expense/static/css/main.4b998ee4.css.map",
+    "main.9843f141.js.map": "/Smart-Expense/static/js/main.9843f141.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b998ee4.css",
+    "static/js/main.9843f141.js"
+  ]
+}
