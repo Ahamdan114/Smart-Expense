@@ -20,7 +20,7 @@ export default function AddTransaction() {
 
     return (
         <>
-            <h3>Add new transaction</h3>
+            <h3 className="category-header">Add new transaction</h3>
             <form onSubmit={onSubmit} id="form">
                 <div className="form-control">
                     <label htmlFor="text">Text</label>
