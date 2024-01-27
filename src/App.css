@@ -119,7 +119,7 @@ input[type="number"] {
     justify-content: space-between;
     position: relative;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 .list li.plus {
@@ -151,17 +151,25 @@ input[type="number"] {
 }
 
 .history-title {
-  box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 30px 5px -12px rgba(0, 0, 0, 0.15); */
 }
 
 .history-review {
     display: flex;
     flex-direction: column-reverse;
     overflow-y: hidden;
-    max-height: 200px;
-    position: relative;
-    transition: overflow-y 2s ease-in-out;
+    max-height: 205px;
+    border-top: 1px solid black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
+.history-review::-webkit-scrollbar {
+  width: 8px;
+}
+
+
 
 .history-review:hover {
   overflow-y: auto;
