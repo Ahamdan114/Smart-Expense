@@ -1,20 +1,19 @@
 // Favicon.jsx
 import React, { useEffect } from "react";
-import { SiSololearn } from "react-icons/si";
+import { SiSmartthings } from "react-icons/si";
 import { IconContext } from "react-icons";
 import ReactDOMServer from "react-dom/server";
 
-// This component dynamically changes the favicon of the page. 
+// This component dynamically changes the favicon of the page.
 // It wasn't done by me if you're wondering.
 // I left comments here for future learning for me.
 
 const Favicon = () => {
     useEffect(() => {
-
         // Create an instance of the React icon component
         const reactIcon = (
-            <IconContext.Provider value={{ size: "32px", color: "white"}}>
-                <SiSololearn />
+            <IconContext.Provider value={{ size: "32px", color: "white" }}>
+                <SiSmartthings />
             </IconContext.Provider>
         );
 
