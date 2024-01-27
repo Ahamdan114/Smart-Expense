@@ -8,7 +8,7 @@ export default function TransactionList() {
     return (
         <>
             <h3>History</h3>
-            <ul id="list" className="list">
+            <ul id="list" className="list history-review">
                 {transactions.map((transaction) => (
                     <Transaction
                         key={transaction.id}

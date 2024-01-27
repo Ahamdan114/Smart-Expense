@@ -149,3 +149,10 @@ input[type='number'] {
 .list li:hover .delete-btn {
   opacity: 1;
 }
+
+.history-review {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  max-height: 215px;
+}
