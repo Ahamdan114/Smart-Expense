@@ -6,11 +6,11 @@ export default function Transaction({ transaction }) {
     const sign = transaction.amount > 0 ? "+" : "-";
 
     return (
-        <li className={transaction.amount < 0 ? "minus" : "plus"}>
+        <li className={`item-container ${transaction.amount < 0 ? "minus" : "plus"}`}>
             {transaction.text}{" "}
-            <span>
+            <div>
                 {sign}${Math.abs(transaction.amount)}
-            </span>
+            </div>
             <button
                 onClick={() => deleteTransaction(transaction.id)}
                 className="delete-btn"

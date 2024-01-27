@@ -154,17 +154,25 @@ input[type="number"] {
   box-shadow: 0px 50px 15px -5px rgba(0, 0, 0, 0.15);
 }
 
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .history-review {
     display: flex;
     flex-direction: column-reverse;
-    overflow-y: auto;    
+    overflow-y: hidden;
     max-height: 205px;
-    border-top: 1px solid black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     box-shadow: inset 0px 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.history-review:hover {
+  overflow-y: scroll;
+}
 .history-review::-webkit-scrollbar {
   width: 8px;
 }
@@ -178,6 +186,3 @@ input[type="number"] {
   background-color: #808080;
 }
 
-
-.history-review:hover {
-}
