@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useState } from "react";
 import AppReducer from "./AppReducer";
 
 // Initial State
@@ -7,8 +7,7 @@ const initialState = {
     transactions: [],
 };
 
-const currency = JSON.parse(localStorage.getItem("currencyList"));
-console.log(currency)
+const currencies = JSON.parse(localStorage.getItem("currencyList"));
 
 // Create context
 
@@ -18,7 +17,7 @@ export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
-
+    const [currency, setCurrency] = useState(currencies[31][0]);
     function deleteTransaction(id) {
         dispatch({
             type: "Delete_Transaction",
@@ -37,12 +36,9 @@ export const GlobalProvider = ({ children }) => {
         <GlobalContext.Provider
             value={{
                 transactions: state.transactions,
-                currency: currency[31][0],
+                currency: currency,
                 changeCurrency(currency) {
-                    dispatch({
-                        type: "Change_Currency",
-                        payload: currency,
-                    });
+                    setCurrency(currency)
                 },
                 deleteTransaction,
                 addTransaction,
