@@ -5,7 +5,7 @@ import Transaction from "./Transaction";
 import "./TransactionList.css";
 
 export default function TransactionList() {
-    const { transactions } = useContext(GlobalContext);
+    const { transactions, currency } = useContext(GlobalContext);
     const [hasShadow, setHasShadow] = useState(false);
     
     function verifyHistory() {
@@ -26,7 +26,7 @@ export default function TransactionList() {
             {transactions.length > 0 ? (
                 <ul id="list" className="list history-review" onMouseOver={verifyHistory} onMouseLeave={verifyHistory} style={{overflowY: hasShadow ? "scroll" : "hidden"}}>
                     {transactions.map((transaction) => (
-                        <Transaction key={transaction.id} transaction={transaction} />
+                        <Transaction key={transaction.id} transaction={transaction} currency={currency} />
                     ))}
                 </ul>
             ) : (

@@ -6,7 +6,7 @@ export default function AddTransaction() {
     const [text, setText] = useState("");
     const [amount, setAmount] = useState(0);
 
-    const { addTransaction } = useContext(GlobalContext);
+    const { addTransaction, currency } = useContext(GlobalContext);
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -34,7 +34,7 @@ export default function AddTransaction() {
                 </div>
                 <div className="form-control">
                     <label htmlFor="amount">
-                        Amount in {/* To be added currency */} <br /> (negative - expenses, positive - income)
+                        Amount in {currency} <br /> (negative - expenses, positive - income)
                     </label>
                     <input
                         type="number"
