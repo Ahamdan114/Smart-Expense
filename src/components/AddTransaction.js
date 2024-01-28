@@ -34,7 +34,7 @@ export default function AddTransaction() {
                 </div>
                 <div className="form-control">
                     <label htmlFor="amount">
-                        Amount <br /> (negative - expenses, positive - income)
+                        Amount in {/* To be added currency */} <br /> (negative - expenses, positive - income)
                     </label>
                     <input
                         type="number"
