@@ -22,7 +22,7 @@ export default function TransactionList() {
                 {transactions.length > 0 && <h3>Insertions: {transactions.length}</h3>}
             </div>
             {transactions.length > 0 ? (
-                <ul id="list" className="list history-review">
+                <ul id="list" className="list history-review" onMouseOver={verifyHistory} onMouseLeave={verifyHistory} style={{overflowY: hasShadow ? "scroll" : "hidden"}}>
                     {transactions.map((transaction) => (
                         <Transaction key={transaction.id} transaction={transaction} />
                     ))}
