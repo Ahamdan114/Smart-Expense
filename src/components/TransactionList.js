@@ -21,7 +21,7 @@ export default function TransactionList() {
         <>
             <div className="category-header history-header">
                 <h3 className={hasShadow ? "history-title" : ""}>History</h3>
-                {transactions.length > 0 && <h3>Insertions: {transactions.length}</h3>}
+                {transactions.length > 0 && <h3>Transactions: {transactions.length}</h3>}
             </div>
             {transactions.length > 0 ? (
                 <ul id="list" className="list history-review" onMouseOver={verifyHistory} onMouseLeave={verifyHistory} style={{overflowY: hasShadow ? "scroll" : "hidden"}}>

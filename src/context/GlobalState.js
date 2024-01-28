@@ -7,6 +7,9 @@ const initialState = {
     transactions: [],
 };
 
+const currency = JSON.parse(localStorage.getItem("currencyList"));
+console.log(currency)
+
 // Create context
 
 export const GlobalContext = createContext(initialState);
@@ -34,7 +37,13 @@ export const GlobalProvider = ({ children }) => {
         <GlobalContext.Provider
             value={{
                 transactions: state.transactions,
-                currency: "USD",
+                currency: currency[31][0],
+                changeCurrency(currency) {
+                    dispatch({
+                        type: "Change_Currency",
+                        payload: currency,
+                    });
+                },
                 deleteTransaction,
                 addTransaction,
             }}
