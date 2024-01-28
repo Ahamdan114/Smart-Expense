@@ -24,6 +24,9 @@ h1 {
 .balance-currency {
     cursor: pointer;
     padding: 10px;
-    /* border: 1px solid red; */
     font-weight: bolder;
+}
+
+.balance-btn {
+    color: #3f3f3f
 }

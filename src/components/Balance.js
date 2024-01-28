@@ -8,15 +8,13 @@ export default function Balance() {
     const amounts = transactions.map((transaction) => transaction.amount);
     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
-
     const currencies = JSON.parse(localStorage.getItem("currencyList"));
-    console.log(currency)
     return (
         <>
             <h4>Your Balance</h4>
             <div className="balance-container">
                 <h1>{currency}{" "}{total}</h1>
-                <button onClick={() => setShowCurrency(!showCurrency)}>Currency {showCurrency ? "↓" : "→"}</button>
+                <button className="balance-btn" onClick={() => setShowCurrency(!showCurrency)}>Currency {showCurrency ? "↓" : "→"}</button>
             </div>
             {showCurrency && <ul className="balance-currency-list">{currencies.map((curency, i) => {
                     return <li key={i} className="balance-currency" onClick={(e) => {

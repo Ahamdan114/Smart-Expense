@@ -13,11 +13,6 @@ export default function AppReducer(state, action) {
                 ...state,
                 transactions: [action.payload, ...state.transactions],
             };
-        case "Change_Currency":
-            return {
-                ...state,
-                currency: action.payload,
-            };
         default:
             return state;
     }

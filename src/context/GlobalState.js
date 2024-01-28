@@ -37,9 +37,7 @@ export const GlobalProvider = ({ children }) => {
             value={{
                 transactions: state.transactions,
                 currency: currency,
-                changeCurrency(currency) {
-                    setCurrency(currency)
-                },
+                changeCurrency: (currency) => setCurrency(currency),
                 deleteTransaction,
                 addTransaction,
             }}
