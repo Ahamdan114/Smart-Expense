@@ -153,6 +153,7 @@ input[type="number"] {
     display: flex;
     justify-content: space-between;
     width: 85%;
+    transition: width 0.3s ease-in, width 1s ease-out;
 }
 
 .history-header {
