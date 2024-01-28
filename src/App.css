@@ -142,18 +142,16 @@ input[type="number"] {
     top: 50%;
     left: -10px;
     transform: translate(-100%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease-in, opacity 1s ease-out, transform 0.3s ease-in-out;
 }
 
-.list li:hover .delete-btn {
-    opacity: 1;
+.list li:active .delete-btn {
+    transform: translate(-100%, -50%) scale(1.2);
 }
 
 .item-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 85%;
 }
 
