@@ -43,7 +43,7 @@ export default function AddTransaction() {
                         placeholder="Enter Amount..."
                     />
                 </div>
-                <button className="btn">Add transaction</button>
+                <button className="btn-add-transaction">Add transaction</button>
             </form>
         </>
     );
