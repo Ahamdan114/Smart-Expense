@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
+import "./Transaction.css"
+
 export default function Transaction({ transaction }) {
     const { deleteTransaction } = useContext(GlobalContext);
     const [isDelete, setIsDelete] = useState(false);

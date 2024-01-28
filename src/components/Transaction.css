@@ -1,0 +1,14 @@
+.delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(-100%, -50%);
+    transition: opacity 0.3s ease-in, opacity 1s ease-out, transform 0.3s ease-in-out;
+}

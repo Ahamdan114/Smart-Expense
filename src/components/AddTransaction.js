@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import "./AddTransaction.css";
 
 export default function AddTransaction() {
     const [text, setText] = useState("");
@@ -23,12 +24,12 @@ export default function AddTransaction() {
             <h3 className="category-header">Add new transaction</h3>
             <form onSubmit={onSubmit} id="form">
                 <div className="form-control">
-                    <label htmlFor="text">Text</label>
+                    <label htmlFor="text">Transaction</label>
                     <input
                         type="text"
                         value={text}
                         onChange={(e) => setText(e.target.value)}
-                        placeholder="Enter text..."
+                        placeholder="Enter Transaction..."
                     />
                 </div>
                 <div className="form-control">
@@ -39,7 +40,7 @@ export default function AddTransaction() {
                         type="number"
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
-                        placeholder="Enter amount..."
+                        placeholder="Enter Amount..."
                     />
                 </div>
                 <button className="btn">Add transaction</button>

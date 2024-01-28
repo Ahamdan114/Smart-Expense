@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import Transaction from "./Transaction";
 
+import "./TransactionList.css";
+
 export default function TransactionList() {
     const { transactions } = useContext(GlobalContext);
     const [hasShadow, setHasShadow] = useState(false);

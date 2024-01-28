@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import "./IncomeExpenses.css";
 
 export default function IncomeExpenses() {
     const { transactions } = useContext(GlobalContext);
