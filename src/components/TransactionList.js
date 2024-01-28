@@ -5,6 +5,7 @@ import Transaction from "./Transaction";
 export default function TransactionList() {
     const { transactions } = useContext(GlobalContext);
     const [hasShadow, setHasShadow] = useState(false);
+    
     function verifyHistory() {
         if (transactions.length >= 4) setHasShadow(true);
         else setHasShadow(false);
@@ -12,7 +13,7 @@ export default function TransactionList() {
 
     useEffect(() => {
         verifyHistory();
-    }, [transactions]);
+    }, [transactions.length]);
 
     return (
         <>
